@@ -1,0 +1,72 @@
+
+.dbtables_list .dbtable .fa-star {
+    display: none;
+}
+.dbtables_list .dbtable.starred .fa-star {
+    display: inherit;
+}
+.dbtables_list .dbtable.starred .fa-star-o {
+    display: none;
+}
+.dbtables_list .starredtables,
+.dbtables_list [data-tree="startoggler"] {
+    display: none;
+}
+.dbtables_list .starredtables li {
+    display: inline;
+    margin-left: .5rem;
+    padding: .5rem;
+}
+.dbtables_list .starredtables ul {
+    display: inline;
+    padding: 0;
+}
+.navdb_table .btn {
+    padding: .2em.5em;
+}
+
+.navdb_table .field a {
+    font-weight: bold;
+}
+
+.navdb_table th.current {
+    background-color: lightgray;
+}
+.navdb_table .optionsth {
+    position: absolute;
+    margin-top: -1em;
+    white-space: nowrap;
+    display: none;
+}
+.navdb_table th:hover .optionsth {
+    display: block;
+}
+.navdb_table .optionsth .icon {
+    margin-right: 0;
+}
+.navdb_table .optionsth a {
+    opacity: .3;
+}
+.navdb_table th.current .optionsth a {
+    opacity: .7;
+}
+.navdb_table .optionsth a:hover {
+    opacity: 1;
+}
+.navdb_tableform input {
+    width: 100%;
+}
+.navdb_tableform .form-control.inputerror {
+    background-color: lightcoral;
+}
+.navdb_tableform .form-control.inputerror:focus {
+    background-color: lightcoral;
+}
+.navdb_tableform select {
+    min-width: 7em;
+}
+.navdb_tableform .filterview  {
+    font-style: italic;
+    margin-left: .5em;
+    color: darkgray;
+}

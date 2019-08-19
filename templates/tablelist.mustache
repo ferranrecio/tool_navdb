@@ -1,0 +1,39 @@
+<div data-enhance="tree" class="dbtables_list">
+    <div class="starredtables m-3" data-tree="starred">
+        <span>{{#str}}starred_elements, tool_navdb{{/str}}</span>
+        <ul>
+        </ul>
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">
+                <i class="fa fa-filter" aria-hidden="true"></i>
+            </span>
+        </div>
+        <input type="text" class="form-control" placeholder="{{#str}}filter, core{{/str}}" aria-describedby="inputGroupPrepend" data-tree="filter">
+    </div>
+    <ul class="list-group" data-tree="root">
+        {{#groups}}
+        <li data-id="{{name}}" class="list-group-item {{#starred}}starred{{/starred}} {{#table}}dbtable{{/table}}{{^table}}list-group-item-secondary{{/table}}">
+            {{#table}}
+                {{> tool_navdb/tablelist_item }}
+            {{/table}}
+            {{^table}}
+                <span>{{{name}}}</span>
+                <ul class="list-group">
+                    {{#tables}}
+                    <li data-id="{{name}}" class="dbtable list-group-item {{#starred}}starred{{/starred}}">
+                        {{> tool_navdb/tablelist_item }}
+                    </li>
+                    {{/tables}}
+                </ul>
+            {{/table}}
+        </li>
+        {{/groups}}
+    </ul>
+</div>
+{{#js}}
+require(['jquery','tool_navdb/tree'], function($, Ariatree) {
+    var tree = new Ariatree('[data-enhance=tree]');
+});
+{{/js}}
