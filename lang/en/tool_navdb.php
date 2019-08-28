@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['pluginname'] = 'Database Navigation';
 
 $string['err_sql_error'] = 'FILTER ERROR: {$a->error}<br/><br/>SQL:{$a->sql}';
-$string['err_table_not_found'] = 'Table "{$a}" not found';
+$string['err_table_not_found'] = 'Table {$a} not found';
 $string['goto_at_cua_registre'] = 'Goto cua_registre records';
 $string['goto_at_cua_proces_registres'] = 'Goto proces registers';
 $string['goto_context'] = 'Go to context record';
