@@ -86,7 +86,7 @@ if (empty($navdb->table)) {
             echo $OUTPUT->render_from_template('tool_navdb/tableform', $data);
         } else {
             $returnurl = $navdb->getUrl(array('table' => '', 'filter' => ''));
-            print_error('err_table_not_found', 'tool_navdb', $returnurl, $navdb->table);
+            notice (get_string('err_table_not_found', 'tool_navdb', $navdb->table), $returnurl);
         }
     } else {
         // show filtered results

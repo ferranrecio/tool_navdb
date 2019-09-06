@@ -181,7 +181,7 @@ class navdb {
             return 0;
         } catch (\dml_exception $e) {
             $returnurl = $this->getUrl();
-            print_error('err_sql_error', 'tool_navdb', $returnurl, $e);
+            notice( get_string('err_sql_error', 'tool_navdb', $e), $returnurl);
             return 0;
         }
     }
@@ -210,7 +210,7 @@ class navdb {
             return false;
         } catch (\dml_exception $e) {
             $returnurl = $this->getUrl();
-            print_error('err_sql_error', 'tool_navdb', $returnurl, $e);
+            notice( get_string('err_sql_error', 'tool_navdb', $e), $returnurl);
             return false;
         }
         // get fields
