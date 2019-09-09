@@ -17,7 +17,7 @@ Feature: Manage DB table list
     And I navigate to "Development > Database Navigation" in site administration
 
     # Having clicked on it, I should also see the list of tables.
-    And I should see "Current Navigation"
+    Then I should see "Current Navigation"
     And I should see "course_modules"
 
   Scenario: Display table list
@@ -26,5 +26,5 @@ Feature: Manage DB table list
     And I set the field "filter" to "course_mod"
 
     # Once filtered only some tables must appear
-    And I should see "course_modules"
+    Then I should see "course_modules"
     And I should see "course_modules_completion"

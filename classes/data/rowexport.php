@@ -39,6 +39,7 @@ class rowexport {
 
     private $navdb;
     private $rowoptions;
+    private $rowcount;
 
     /**
      * Constructor.
@@ -49,6 +50,7 @@ class rowexport {
         global $DB;
         $this->navdb = $navdb;
         $this->rowoptions = new \tool_navdb\data\rowoptions($navdb);
+        $this->rowcount = 0;
     }
 
     /**
@@ -105,6 +107,8 @@ class rowexport {
     public function export_row($record, $alone=false) {
         $data = new stdClass();
         $data->id = $record->id;
+        $data->rownum = $this->rowcount;
+        $this->rowcount++;
         // options
         $options = $this->rowoptions->get_options($this->navdb->table, $record, $alone);
         if (empty($options)) {

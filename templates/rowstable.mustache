@@ -28,7 +28,7 @@
 
 }}
 <h3 class="mb-4"><i class="fa fa-database" aria-hidden="true"></i> {{table}}</h3>
-<table class="table navdb_table" data-enhance="rowstable">
+<table class="table navdb_table tableview" data-enhance="rowstable">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -50,8 +50,8 @@
   </thead>
   <tbody>
     {{#rows}}
-        <tr>
-          <td>
+        <tr class="rownum_{{rownum}}">
+          <td class="opsid_{{id}}">
               {{> tool_navdb/rowoptions}}
           </td>
           {{#cols}}
@@ -69,6 +69,7 @@
     {{/rows}}
   </tbody>
 </table>
+<p>{{#str}} rowcount, tool_navdb, {{count}} {{/str}}</p>
 {{#js}}
 require(['jquery','tool_navdb/rowstable'], function($, Rowstable) {
     var table = new Rowstable('[data-enhance=rowstable]');

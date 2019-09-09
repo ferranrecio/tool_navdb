@@ -26,19 +26,19 @@
     * none
 
 }}
-<table class="table navdb_table">
+<table class="table navdb_table singleview">
   <tbody>
     {{#rows}}
-        <tr>
-          <th scope="row">1</th>
-          <td>
+        <tr class="row_ops">
+          <th scope="row">#</th>
+          <td class="opsid_{{id}}">
               {{> tool_navdb/rowoptions}}
           </td>
         </tr>
         {{#cols}}
-            <tr>
-                <th scope="row">{{name}}</th>
-                <td class="field">
+            <tr class="row_{{name}}">
+                <th scope="row" class="col_{{name}}">{{name}}</th>
+                <td class="field  col_{{name}}">
                     {{#url}}
                         <a href="{{{url}}}" {{#title}}title="{{title}}"{{/title}}>
                             {{{text}}}

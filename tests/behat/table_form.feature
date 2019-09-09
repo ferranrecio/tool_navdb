@@ -17,7 +17,7 @@ Feature: Visualize singular table filter form
   Scenario: Display user_enrolments table form
     And I follow "user_enrolments"
     # Having clicked on it, I should also see the list of tables.
-    And I should see "status"
+    Then I should see "status"
 
   Scenario: Non existent table
     When I set the field "table" to "non_existent_table"
