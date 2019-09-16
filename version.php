@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'tool_navdb';
-$plugin->release = '0.1.0';
-$plugin->version = 2019090901;
+$plugin->release = '0.2.0';
+$plugin->version = 2019091601;
 $plugin->requires = 2017051500;
 $plugin->maturity = MATURITY_BETA;

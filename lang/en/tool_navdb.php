@@ -51,6 +51,7 @@ $string['navdb_limit'] = 'Limit';
 $string['navdb_limitfrom'] = 'Limit From';
 $string['navdb_muggle'] = 'Expand query and delete unnecessary fields';
 $string['noresults'] = 'No results returned for filter <b>{$a->filter}</b> on table <b>{$a->table}</b>';
+$string['privacy:metadata'] = 'The Development data generator plugin does not store any personal data.';
 $string['rowcount'] = 'Row count: {$a}';
 $string['show_results'] = 'Execute query';
 $string['show_db'] = 'Return to table list';
